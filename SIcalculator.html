@@ -1,0 +1,53 @@
+<html><head>
+	<meta charset="utf-8">
+	<title>Simples Interest</title>
+	<meta name="viweport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no;uesr-scalable=0;">
+    <link rel="stylesheet" href="SI.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row"><br><br><br>
+				<div id="calculate1"><br>
+					<h2>SIMPLE INTEREST CALCULATOR</h2>
+					<div class="calcu">
+					<label><h3>PRINCIPAL:</h3></label>
+					<input id="principals" type="text" placeholder="Enter the Amount:">
+					<label class="pad"><h3>RATE(%):</h3></label>
+					<input id="rates" type="text" placeholder="Enter the Rate(%):">
+					<label><h3>TIME(MONTH):</h3></label>
+					<input id="times" type="text" placeholder="Enter the Month:"><br><br>
+					<button type="button" onclick="simpleint()" class="btn"><b>Calculate</b></button>
+					<button type="button" onclick="document.getElementById('principals').value='',document.getElementById('rates').value='',document.getElementById('times').value='',document.getElementById('results').innerHTML='',document.getElementById('totals').innerHTML='' " class="btn clear"><b>Clear</b></button>
+					<button class="btn Refresh" type="button" onclick="Refresh()"><b>Refresh</b></button><br>
+					<p id="error"></p>
+					<p class="total"><b>Interest is:</b><span id="results"></span></p>
+					<p class="total"><b>Total Amount is:</b><span id="totals"></span></p>
+				</div>
+			</div>
+				
+		</div>
+
+	</div>
+<script>
+		function simpleint(){
+			Principals=document.getElementById("principals").value;
+			Rates=document.getElementById("rates").value;
+			Times=document.getElementById("times").value;
+			Calculates=((Principals*Rates*Times)/100).toFixed(2);
+			Totals=Number(Principals)+Number(Calculates)
+			document.getElementById("results").innerHTML=Calculates;
+			document.getElementById("totals").innerHTML=Totals;
+			if(Principals=="" && Rates=="" && Times=="")
+			{
+				document.getElementById("error").innerHTML="Please Enter the value of principal,Rate,Time "
+			}
+		}
+		function Refresh(){
+			if(confirm("Are you sure want to Refresh this page?"))
+			{
+				location.reload();
+			}
+		}
+</script>
+
+</body></html>

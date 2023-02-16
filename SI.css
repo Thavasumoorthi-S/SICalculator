@@ -1,0 +1,66 @@
+#calculate1{
+	background-color:coral;
+	margin: 0 auto;
+	height: 550px;
+	width: 450px;
+	border-radius: 2rem;
+}
+.calcu{
+	text-align: center;
+}
+#totals{
+	color:maroon;
+	font-size: 20px;
+	font-weight: bold;
+}
+#results{
+	color:maroon;
+	font-weight: bold;
+}
+body{
+	background-color:lightgoldenrodyellow;
+}
+label{
+	color:yellow;
+}
+.btn{
+	background-color: blue;
+	color:white;
+}
+h1{
+	text-align: center;
+	margin-top: 25px;
+	color: Blue;
+}
+#error{
+	font-size: 20px;
+	color:white;
+}
+.Refresh{
+	background-color: Yellow;
+	color: maroon;
+	margin-left:8px;
+}
+.clear{
+	background-color: red;
+	color: white;
+	margin-left: 8px;
+}
+h2{
+	text-align:center;
+	color: black;
+	background-color: white;
+}
+.total{
+	font-size: 20px;
+	color:black;
+	background-color: white;
+}
+button{
+	padding: 5px;
+	font-size: 15px;
+}
+.Refresh{
+	background-color: green;
+	color: white;
+}
